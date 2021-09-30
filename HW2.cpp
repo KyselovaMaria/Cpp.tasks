@@ -11,12 +11,11 @@ void findRoots(int a, int b, int c)
 	}
 
 	int d = b * b - 4 * a * c;
-	double sqrt_val = sqrt(abs(d));
 
 	if (d > 0) {
 		cout << "Roots are real and different \n";
-		cout << (double)(-b + sqrt_val) / (2 * a) << "\n"
-			<< (double)(-b - sqrt_val) / (2 * a);
+		cout << (double)(-b + sqrt(d)) / (2 * a) << "\n"
+			<< (double)(-b - sqrt(d)) / (2 * a);
 	}
 	else 
 	{
