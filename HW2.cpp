@@ -1,13 +1,13 @@
-#include <iostream>
-#include <cmath>
+#include <bits/stdc++.h>
 using namespace std;
 
-void findRoots(int a, int b, int c)
+void findRoots(double a, double b, double c)
 {
-	
-	if (a == 0) {
-		cout << "Error";
-		return;
+  
+  if (a == 0) {
+    cout << "The equation is not quadratic \n";
+    cout << -c/b;
+    return;
 	}
 
 	int d = b * b - 4 * a * c;
@@ -29,7 +29,7 @@ int main()
 {
 	//int a = 3, b = 100, c = 2;
 	double a, b, c;
-    cin >> a >> b >> c;
+        cin >> a >> b >> c;
 	findRoots(a, b, c);
 	return 0;
 }
