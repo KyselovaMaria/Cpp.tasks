@@ -4,7 +4,8 @@ using namespace std;
 
 void solving_system(float a1,float b1,float c1,float a2,float b2,float c2) {
   if ((a1 * b2) - (b1 * a2) == 0){
-      if (a1/a2==b1/b2  && a1/a2==c1/c2  && c1/c2==b1/b2)
+      float EPSILON=1.19209e-07;
+      if ((a1/a2-b1/b2<EPSILON && -a1/a2+b1/b2<EPSILON) &&( -a1/a2+c1/c2<EPSILON && a1/a2-c1/c2<EPSILON)  && (-c1/c2+b1/b2<EPSILON && c1/c2-b1/b2<EPSILON))
          cout << "Many solutions exist" << endl;
       else 
          cout << "The system has no solution" << endl;
