@@ -4,7 +4,7 @@ using namespace std;
 void findRoots(double a, double b, double c)
 {
     
-  int d = b * b - 4 * a * c;
+  double d = b * b - 4 * a * c;
   if (a==0 && b!=0) {
     cout << "The equation is not quadratic \n";
     cout << "1 solution " << endl;
