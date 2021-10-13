@@ -11,13 +11,14 @@ float myFunction(float eps){
     res = res * (sqrt(2 + numerator)/2);
     numerator = sqrt(2 + numerator);
   }  
-  return res;
+  return 2/res;
 }
 int main()
 {
   //float eps = 0.9999999999999999;
+  float eps;
   cout << "eps=" ;
   cin >> eps;
-  cout <<"Approximation of 2/pi: " << myFunction(eps)<< endl;
+  cout <<"Approximation of pi: " << myFunction(eps)<< endl;
   return 0;
 }
