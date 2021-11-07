@@ -37,7 +37,14 @@ void Print(int** arr, int N, int M)
     cout << "\n";
 }
 
-
+void Del(int** a, int row)
+{
+    for (int i = 0; i < row; i++)
+    {
+        delete[]a[i];
+    }
+    delete[]a;
+}
 
 int** AddkCol(int** a, int N, int& M, int k){
     int** a1;
@@ -63,6 +70,7 @@ int** AddkCol(int** a, int N, int& M, int k){
     }
     
     //Randfill(a1, N, M1);
+    Del(a, N);
     a = a1;
     return a;
 }
@@ -81,5 +89,6 @@ int main()
     cout << "Matrix 2.0: \n";
     a = AddkCol(a, N, M, k);
     Print(a, N, M+k);
+    Del(a, N);
     
 }
